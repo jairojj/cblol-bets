@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CblolBets</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+
+  <body>
+    <%= render 'layouts/header' %>
+
+    <div class="container">
+      <% if !notice.nil? %>
+        <div class="alert alert-warning" role="alert"><%= notice %></div>
+      <% end %>
+
+      <% if !alert.nil? %>
+        <div class="alert alert-danger" role="alert"><%= alert %></div>
+      <% end %>  
+
+      <%= yield %>
+    </div>
+  </body>
+</html>

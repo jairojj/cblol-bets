@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <% if user_signed_in?%>
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Home", '/' %></li>
+          <li><%= link_to "Jogos", '/jogos' %></li>
+        </ul>    
+        <ul class="nav navbar-nav navbar-right">
+          <li>    
+            <% if current_user.picture.present? %>
+              <%= image_tag(current_user.picture, size: "40", class: "img-circle") %>
+            <% else %>
+              <%= image_tag gravatar_url(current_user.email, 40), alt: "", class: "img-circle" %>
+            <% end %>
+          </li>
+          <li><%= link_to current_user.name, '/users/edit' %></li>
+          <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
+        </ul>
+      <% else %>
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Home", '/' %></li>
+          <li><%= link_to "Jogos", '/jogos' %></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Log in", new_user_session_path %></li>
+        </ul>  
+      <% end %>
+  </div>
+</nav>

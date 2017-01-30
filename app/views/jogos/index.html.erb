@@ -1,0 +1,24 @@
+<h1>Semana <%= @jogo[0].semana %> </h1>
+
+<% @jogo.each do |jogo| %>
+  
+  <div class="card">
+    <div id="time1">
+      <p> <%= jogo.time1 %> </p>
+      <%= image_tag(jogo.time1[0..2].downcase, height: '150', width: '150px') %>
+      <p> <%= jogo.contagem_vit1 %> </p>
+    </div>
+    
+    <div id="middle">
+      <button type="button" class="btn btn-success">Aposte</button>
+      <p> <%= jogo.contagem_empate %> </p>
+    </div>
+    
+    <div id="time2">
+      <p> <%= jogo.time2 %> </p>
+      <%= image_tag(jogo.time2[0..2].downcase, height: '150', width: '150px' ) %>
+      <p> <%= jogo.contagem_vit2 %> </p>
+    </div>
+  </div>
+  
+<% end %>
