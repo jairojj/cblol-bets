@@ -113,6 +113,7 @@ GEM
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
+    pg (0.18.4)
     puma (3.7.0)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -200,6 +201,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   omniauth
   omniauth-facebook
+  pg (= 0.18.4)
   puma (~> 3.0)
   rails (~> 5.0.1)
   sass-rails (~> 5.0)
