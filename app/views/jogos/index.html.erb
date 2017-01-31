@@ -10,8 +10,8 @@
     </div>
     
     <div id="middle">
-      <button type="button" class="btn btn-success">Aposte</button>
-      <p> <%= jogo.contagem_empate %> </p>
+      <%= link_to 'Aposte', aposta_new_path(:id => jogo.id), :class => "btn btn-success" %>
+      <p id="empate"> <%= jogo.contagem_empate %> </p>
     </div>
     
     <div id="time2">

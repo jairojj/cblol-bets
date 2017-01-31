@@ -1,0 +1,26 @@
+  <div class="aposta">
+    <%= form_for(@bet, url: aposta_create_path) do |f| %>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+      <%= f.hidden_field :jogo_id, :value => params[:id] %>
+      
+      <div id="time1_aposta">
+        <p> <%= @jogo.time1 %> </p>
+        <%= image_tag(@jogo.time1[0..2].downcase, height: '300', width: '300') %>
+        <%= f.select(:resultado_time1, [['Resultado',''], ['Vitória','vitoria'], ['Empate','empate'], ['Derrota','derrota']], {}, { class: 'form-control'})%>  
+        
+      </div>
+      
+      <div id="middle_aposta">
+        <%= f.label :valor %> <span id="min">minimo: 200</span>
+        <%= f.number_field :valor, :value => 200, min: 200, class:'form-control' %>
+      </div>
+      
+      <div id="time2_aposta">
+        <p> <%= @jogo.time2 %> </p>
+        <%= image_tag(@jogo.time2[0..2].downcase, height: '300', width: '300' ) %>
+        <%= f.select(:resultado_time2, [['Resultado',''], ['Vitória','vitoria'], ['Empate','empate'], ['Derrota','derrota']], {}, { class: 'form-control'})%>  
+      </div>
+</div>
+  <%= f.submit "Enviar", class: "btn btn-success" %>
+  <% end %>
+

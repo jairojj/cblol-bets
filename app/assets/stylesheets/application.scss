@@ -3,6 +3,13 @@
 
 body{
     font-family: 'Roboto', sans-serif;
+    background-color: #EDEDED;
+    font-weight: bold;
+}
+
+#min{
+    font-size: 11px;
+    font-style: italic;
 }
 
 .card{
@@ -13,10 +20,32 @@ body{
     padding: 20px;
 }
 
+.aposta{
+    width: 1000px;
+    height: 400px;
+    padding: 20px;
+    margin: auto;
+}
+
+
 #middle{
     float: left;
-    width: 100px; 
-    margin: auto;
+    width: 100px;
+    margin-top: 100px;
+    margin-left: 45px;
+}
+
+#middle_aposta{
+    float: left;
+    width: 100px;
+    margin-top: 310px;
+    margin-left: 130px;
+}
+
+
+#empate{
+    margin-top: 53px;
+    margin-left: 25px;
 }
 
 #middle p{
@@ -37,3 +66,73 @@ body{
     font-weight: bold;
     font-size: 20px;
 }
+
+#time1_aposta{
+    text-align: center;
+    float: left;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#time2_aposta{
+    text-align: center;
+    float: right;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+//    BOOTSTRAP
+
+$bgDefault      : #2ecc71;
+$bgHighlight    : #27ae60;
+$colDefault     : #ecf0f1;
+$colHover       : #d1ffed; 
+
+/* --- Style --- */
+.navbar-default {
+    background-color: $bgDefault;
+    border-color: $bgHighlight;
+    .navbar-brand {
+        color: $colDefault;
+        &:hover, &:focus {
+            color: $colHover; }}
+    .navbar-nav {
+        > li {
+            > a {
+                color: $colDefault;
+                &:hover, &:focus {
+                    color: $colHover;   }}}
+        .active {
+            > a, > a:hover, > a:focus {
+                color: $colHover;
+                background-color: $bgHighlight; }}
+        .open {
+            > a, > a:hover, > a:focus {
+                color: $colHover;
+                background-color: $bgHighlight;
+                .caret {
+                    border-top-color: $colHover;
+                    border-bottom-color: $colHover; }}}
+        > .dropdown {
+            > a {
+                .caret {
+                    border-top-color: $colDefault;
+                    border-bottom-color: $colDefault; }
+                &:hover, &:focus {
+                    .caret {
+                        border-top-color: $colHover;
+                        border-bottom-color: $colHover; }}}}}
+    .navbar-toggle {
+        border-color: $bgHighlight;
+        &:hover, &:focus {
+            background-color: $bgHighlight; }
+        .icon-bar {
+            background-color: $colDefault; }}}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: $colDefault;
+        &:hover, &:focus {
+            color: $colHover;
+            background-color: $bgHighlight; }}
+}
+
