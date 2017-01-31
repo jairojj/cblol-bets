@@ -10,10 +10,12 @@
     </div>
     
     <div id="middle">
-      <% if get_bets(current_user.id, jogo.id) %>
-        <button class="btn btn-warning" disabled> Aposte </button>
-      <% else %>
-        <%= link_to 'Aposte', aposta_new_path(:id => jogo.id), :class => "btn btn-success" %>
+      <% if user_signed_in? %>
+        <% if get_bets(current_user.id, jogo.id) %>
+          <button class="btn btn-warning" disabled> Aposte </button>
+        <% else %>
+          <%= link_to 'Aposte', aposta_new_path(:id => jogo.id), :class => "btn btn-success" %>
+        <% end %>
       <% end %>
       <p class="coin" id="empate"> <%= jogo.contagem_empate %> <%= image_tag("coin.png", height: '15', width: '15')%>  </p>
     </div>
