@@ -1,0 +1,41 @@
+<% @bet.each do |bet| %>
+  <h4> Semana <%= get_jogo(bet.jogo_id).semana %></h4>
+  <div class="minhas_apostas">
+    <div id="time1_minhas">
+      <p> <%= get_jogo(bet.jogo_id).time1 %> </p>
+      <%= image_tag(get_jogo(bet.jogo_id).time1[0..2].downcase, height: '100', width: '100') %>
+    </div>
+    
+    <div id="middle_minhas">
+      <% if bet.resultado == -1 %>
+        2 x 0
+      <% elsif bet.resultado == 0 %>
+        1 x 1
+      <% else %>
+        0 x 2
+      <% end %>
+    </div>
+    
+    <div id="time2_minhas">
+      <p> <%= get_jogo(bet.jogo_id).time2 %> </p>
+      <%= image_tag(get_jogo(bet.jogo_id).time2[0..2].downcase, height: '100', width: '100' ) %>
+    </div>
+
+    <div id="coin_minhas">
+      <p> <%= get_jogo(bet.jogo_id).data %> </p>
+      <br>
+      <p> <%= bet.valor%> <%= image_tag("coin.png", height: '25', width: '25')%> </p>
+      <br>
+      <% if get_jogo(bet.jogo_id).status == false %>
+        <span class="label label-default">Jogo nao terminou</span>
+      <% else %>
+        <% if get_jogo(bet.jogo_id).resultado == bet.resultado %>
+          <span class="label label-success">Voce ganhou X</span>
+        <% else %>
+          <span class="label label-danger"> Voce perdeu </span>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+

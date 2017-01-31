@@ -16,7 +16,7 @@ $(function(){
       $('#bet_resultado_time2').val('empate');
     }
     else{
-      $('#bet_resultado_time2').val('');
+      $('#bet_resultado_time2').val('null');
     }
   });
   
@@ -32,7 +32,7 @@ $(function(){
       $('#bet_resultado_time1').val('empate');
     }
     else {
-      $('#bet_resultado_time1').val('');
+      $('#bet_resultado_time1').val('null');
     }
   });  
 

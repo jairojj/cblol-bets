@@ -6,18 +6,22 @@
     <div id="time1">
       <p> <%= jogo.time1 %> </p>
       <%= image_tag(jogo.time1[0..2].downcase, height: '150', width: '150px') %>
-      <p> <%= jogo.contagem_vit1 %> </p>
+      <p class="coin"> <%= jogo.contagem_vit1 %> <%= image_tag("coin.png", height: '15', width: '15')%> </p>
     </div>
     
     <div id="middle">
-      <%= link_to 'Aposte', aposta_new_path(:id => jogo.id), :class => "btn btn-success" %>
-      <p id="empate"> <%= jogo.contagem_empate %> </p>
+      <% if get_bets(current_user.id, jogo.id) %>
+        <button class="btn btn-warning" disabled> Aposte </button>
+      <% else %>
+        <%= link_to 'Aposte', aposta_new_path(:id => jogo.id), :class => "btn btn-success" %>
+      <% end %>
+      <p class="coin" id="empate"> <%= jogo.contagem_empate %> <%= image_tag("coin.png", height: '15', width: '15')%>  </p>
     </div>
     
     <div id="time2">
       <p> <%= jogo.time2 %> </p>
       <%= image_tag(jogo.time2[0..2].downcase, height: '150', width: '150px' ) %>
-      <p> <%= jogo.contagem_vit2 %> </p>
+      <p class="coin"> <%= jogo.contagem_vit2 %> <%= image_tag("coin.png", height: '15', width: '15')%>  </p>
     </div>
   </div>
   
