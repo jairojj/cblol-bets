@@ -1,30 +1,54 @@
-<nav class="navbar navbar-default navbar-static-top">
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <% if user_signed_in?%>
-        <ul class="nav navbar-nav">
-          <li><%= link_to "Home", '/' %></li>
-          <li><%= link_to "Jogos", '/jogos' %></li>
-          <li><%= link_to "Minhas apostas", '/aposta/index' %></li>
-        </ul>    
-        <ul class="nav navbar-nav navbar-right">
-          <li>    
-            <% if current_user.picture.present? %>
-              <%= image_tag(current_user.picture, size: "40", class: "img-circle") %>
-            <% else %>
-              <%= image_tag gravatar_url(current_user.email, 40), alt: "", class: "img-circle" %>
-            <% end %>
-          </li>
-          <li><%= link_to current_user.name, '/users/edit' %></li>
-          <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
-        </ul>
-      <% else %>
-        <ul class="nav navbar-nav">
-          <li><%= link_to "Home", '/' %></li>
-          <li><%= link_to "Jogos", '/jogos' %></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Log in", new_user_session_path %></li>
-        </ul>  
-      <% end %>
-  </div>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <ul class="w3-navbar w3-white w3-card-2" id="myNavbar">
+    <% if user_signed_in?%>
+      <li>
+        <%= link_to "CBLOL BETS", '/', class: 'w3-wide' %>
+        <%= link_to "Jogos", '/jogos' %>
+        <%= link_to "Minhas apostas", '/aposta/index' %>
+      </li>
+      <!-- Right-sided navbar links -->
+      <li class="w3-right w3-hide-small">
+        <%= link_to current_user.name, '/users/edit' %>
+        <% if current_user.picture.present? %>
+          <%= image_tag(current_user.picture, size: "40", class: "img-circle") %>
+        <% else %>
+          <%= image_tag gravatar_url(current_user.email, 40), alt: "", class: "img-circle" %>
+        <% end %>
+        <%= link_to "Sair", destroy_user_session_path, method: :delete %>
+      </li>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+      <li>
+        <a href="javascript:void(0)" class="w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+          <i class="fa fa-bars w3-padding-right w3-padding-left"></i>
+        </a>
+      </li>
+    <% else %>
+      <li>
+        <%= link_to "CBLOL BETS", '/', class: 'w3-wide' %>
+        <%= link_to "Jogos", '/jogos' %>
+      </li>
+      <!-- Right-sided navbar links -->
+      <li class="w3-right w3-hide-small">
+        <%= link_to "Log in", new_user_session_path %>
+      </li>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+      <li>
+        <a href="javascript:void(0)" class="w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+          <i class="fa fa-bars w3-padding-right w3-padding-left"></i>
+        </a>
+      </li>
+    <% end %>  
+  </ul>
+</div>
+
+<!-- Sidenav on small screens when clicking the menu icon -->
+<nav class="w3-sidenav w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidenav">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-large w3-padding-16">Close ×</a>
+  <% if user_signed_in?%>
+    <%= link_to current_user.name, '/users/edit' %>
+    <%= link_to "Sair", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "Log in", new_user_session_path %>
+  <% end %>  
 </nav>

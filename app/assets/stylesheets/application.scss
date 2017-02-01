@@ -1,10 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body{
-    font-family: 'Roboto', sans-serif;
-    background-color: #EDEDED;
-    font-weight: bold;
+.container{
+    margin-top: 50px;
+}
+
+footer{
+    margin-top: 100px;
+}
+
+.alert{
+    margin-top: 50px;
 }
 
 .coin{
@@ -18,7 +24,7 @@ body{
 }
 
 .card{
-    width: 500px;
+    width: 550px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     float: left;
     margin: 10px;
@@ -36,9 +42,9 @@ body{
 
 #middle{
     float: left;
-    width: 100px;
+    width: 90px;
     margin-top: 120px;
-    margin-left: 45px;
+    margin-left: 55px;
 }
 
 #empate{
@@ -83,7 +89,7 @@ body{
 
 #middle_aposta{
     float: left;
-    width: 100px;
+    width: 150px;
     margin-top: 310px;
     margin-left: 130px;
 }
@@ -127,59 +133,24 @@ body{
 }
 
 
+//W3
 
-//    BOOTSTRAP
-
-$bgDefault      : #2ecc71;
-$bgHighlight    : #27ae60;
-$colDefault     : #ecf0f1;
-$colHover       : #d1ffed; 
-
-/* --- Style --- */
-.navbar-default {
-    background-color: $bgDefault;
-    border-color: $bgHighlight;
-    .navbar-brand {
-        color: $colDefault;
-        &:hover, &:focus {
-            color: $colHover; }}
-    .navbar-nav {
-        > li {
-            > a {
-                color: $colDefault;
-                &:hover, &:focus {
-                    color: $colHover;   }}}
-        .active {
-            > a, > a:hover, > a:focus {
-                color: $colHover;
-                background-color: $bgHighlight; }}
-        .open {
-            > a, > a:hover, > a:focus {
-                color: $colHover;
-                background-color: $bgHighlight;
-                .caret {
-                    border-top-color: $colHover;
-                    border-bottom-color: $colHover; }}}
-        > .dropdown {
-            > a {
-                .caret {
-                    border-top-color: $colDefault;
-                    border-bottom-color: $colDefault; }
-                &:hover, &:focus {
-                    .caret {
-                        border-top-color: $colHover;
-                        border-bottom-color: $colHover; }}}}}
-    .navbar-toggle {
-        border-color: $bgHighlight;
-        &:hover, &:focus {
-            background-color: $bgHighlight; }
-        .icon-bar {
-            background-color: $colDefault; }}}
-@media (max-width: 767px) {
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-        color: $colDefault;
-        &:hover, &:focus {
-            color: $colHover;
-            background-color: $bgHighlight; }}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
 }
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("lol.jpg");
+    height: 500px;
+}
+.w3-navbar li a {
+    padding: 16px;
+    float: left;
+}
+
+
 

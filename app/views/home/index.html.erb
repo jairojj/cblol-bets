@@ -1,1 +1,40 @@
-<h1>HOME</h1>
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-padding-xxlarge w3-text-white">
+    <span class="w3-jumbo w3-hide-small">Aposte já e divirta-se!</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Aposte já e divirta-se!</span><br>
+    <span class="w3-large">Experimente nosso sistema de apostas e torne-se o melhor!</span>
+    <% if !user_signed_in? %>
+        <p> <%= link_to "Comece já", new_user_session_path, class:"w3-btn w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off" %> </p>
+    <% end %>    
+  </div> 
+</header>
+
+<!-- About Section -->
+<div class="w3-container w3-padding-128" id="about">
+  <h3 class="w3-center">Como funciona?</h3>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-btc w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Coin</p>
+      <p>Usamos a moeda fictícia "coin" para fazer as apostas. Cada usuário novo começa com 1000 coins. </p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-money w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Apostas</p>
+      <p>Para fazer apostas, basta escolher o jogo e o placar. A aposta miníma é de 200 coins. Ao término da semana os vencedores serão anunciados</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-gamepad w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Rodadas</p>
+      <p>As apostas serão encerradas no começo da rodada do CBLOL e serão abertas no fim para a próxima semana.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-trophy w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Ranking</p>
+      <p>Lute para ser o melhor apostador e concorra a premios no final do campeonato. </p>
+    </div>
+  </div>
+</div>
+
+
