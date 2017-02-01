@@ -9,6 +9,11 @@
       </li>
       <!-- Right-sided navbar links -->
       <li class="w3-right w3-hide-small">
+        
+        <%= link_to "" do %>
+          <%= current_user.coin %> 
+          <%= image_tag("coin.png", height: '15', width: '15', style: 'margin-bottom:2.2px;') %>
+        <% end %>
         <%= link_to current_user.name, '/users/edit' %>
         <% if current_user.picture.present? %>
           <%= image_tag(current_user.picture, size: "40", class: "img-circle") %>

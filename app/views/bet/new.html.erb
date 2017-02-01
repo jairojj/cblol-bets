@@ -7,7 +7,7 @@
         <div id="time1_aposta">
           <p> <%= @jogo.time1 %> </p>
           <%= image_tag(@jogo.time1[0..2].downcase, height: '300', width: '300') %>
-          <%= f.select(:resultado_time1, [['Resultado','null'], ['Vitória','vitoria'], ['Empate','empate'], ['Derrota','derrota']], {}, { class: 'form-control'})%>  
+          <%= f.select(:resultado_time1, [['Resultado','null'], ['Vitória','vitoria'], ['Empate','empate'], ['Derrota','derrota']], {}, { class: 'form-control aposta-select'})%>  
           
         </div>
         
@@ -19,10 +19,10 @@
         <div id="time2_aposta">
           <p> <%= @jogo.time2 %> </p>
           <%= image_tag(@jogo.time2[0..2].downcase, height: '300', width: '300' ) %>
-          <%= f.select(:resultado_time2, [['Resultado','null'], ['Vitória','vitoria'], ['Empate','empate'], ['Derrota','derrota']], {}, { class: 'form-control'})%>  
+          <%= f.select(:resultado_time2, [['Resultado','null'], ['Vitória','vitoria'], ['Empate','empate'], ['Derrota','derrota']], {}, { class: 'form-control aposta-select'})%>  
         </div>
   </div>
-    <%= f.submit "Enviar", class: "btn btn-success" %>
+    <%= f.submit "Enviar", class: "btn btn-success aposta-button" %>
     <% end %>
 </div>
 
