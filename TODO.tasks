@@ -1,10 +1,6 @@
 Site:
-  ☐ Colocar footer colado no fim da pagina @low 
-  ☐ Colocar bootstrap nos form de sign up, sign in e edit user @low 
   ☐ Colocar id do facebook em variavel ENV @high 
   ✔ Fazer ranking de usuarios com mais coins @today @done (02/02/2017 16:26:41)
-  ✔ Script para encontrar vencedores da semana e distribuir as coins @done (02/02/2017 15:30:03)
-  ☐ Arrumar e testar script encontrar_vencedores para pegar last(4) @high 
   ☐ Sistema de notificação de ganhadores @low 
   ✔ Retirar coins apostados da tela de jogos @done (02/02/2017 16:00:55)
 
@@ -14,6 +10,17 @@ Infra:
 
 Banco:
   ✔ Criar campo, ganhou_qnt na tabela Bet @done (02/02/2017 15:29:52)
+
+Apostas:
+  ☐ Formula para ganhadores receber o dinheiro certo @high 
+  ☐ Arrumar e testar script encontrar_vencedores para pegar last(4) @high 
+  ✔ Script para encontrar vencedores da semana e distribuir as coins @done (02/02/2017 15:30:03)
+
+
+Front end:
+  ☐ Colocar footer colado no fim da pagina @low 
+  ☐ Colocar bootstrap nos form de sign up, sign in e edit user @low 
+  ☐ Melhorias no site mobile @low 
     
      
      
