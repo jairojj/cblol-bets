@@ -18,11 +18,6 @@ footer{
     margin-top: 50px;
 }
 
-.coin{
-    margin-top: 20px;
-    color: #FFB300;
-}
-
 #min{
     font-size: 11px;
     font-style: italic;
@@ -34,7 +29,15 @@ footer{
     float: left;
     margin: 10px;
     padding: 20px;
-    
+}
+
+#fim-aposta{
+    float: right;
+    font-weight: bold;
+}
+
+#header-jogos{
+    height: 100px;
 }
 
 .aposta{
@@ -48,8 +51,8 @@ footer{
 #middle{
     float: left;
     width: 90px;
-    margin-top: 120px;
-    margin-left: 55px;
+    margin-top: 75px;
+    margin-left: 65px;
 }
 
 #empate{

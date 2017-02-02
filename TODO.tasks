@@ -1,18 +1,19 @@
 Site:
-  ☐ Colocar footer colado no fim da pagina
-  ☐ Colocar bootstrap nos form de sign up, sign in e edit user
-  ☐ Colocar id do facebook em variavel ENV
-     Fazer ranking de usuarios com mais coins
-     Script para encontrar vencedores da semana e distribuir as coins @done
-     Sistema de notificação de ganhadores
-     
+  ☐ Colocar footer colado no fim da pagina @low 
+  ☐ Colocar bootstrap nos form de sign up, sign in e edit user @low 
+  ☐ Colocar id do facebook em variavel ENV @high 
+  ✔ Fazer ranking de usuarios com mais coins @today @done (02/02/2017 16:26:41)
+  ✔ Script para encontrar vencedores da semana e distribuir as coins @done (02/02/2017 15:30:03)
+  ☐ Arrumar e testar script encontrar_vencedores para pegar last(4) @high 
+  ☐ Sistema de notificação de ganhadores @low 
+  ✔ Retirar coins apostados da tela de jogos @done (02/02/2017 16:00:55)
 
 Infra:   
-     Colocar no AWS elastic beanstalk
-     Comprar dominio cblolbets.com.br
+  ☐ Colocar no AWS elastic beanstalk @low 
+  ☐ Comprar dominio cblolbets.com.br @high 
 
 Banco:
-     Criar campo, ganhou_qnt na tabela Bet @done
+  ✔ Criar campo, ganhou_qnt na tabela Bet @done (02/02/2017 15:29:52)
     
      
      
