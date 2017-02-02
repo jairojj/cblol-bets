@@ -1,4 +1,19 @@
-Tasks:
+Site:
   ☐ Colocar footer colado no fim da pagina
   ☐ Colocar bootstrap nos form de sign up, sign in e edit user
   ☐ Colocar id do facebook em variavel ENV
+     Fazer ranking de usuarios com mais coins
+     Script para encontrar vencedores da semana e distribuir as coins @done
+     Sistema de notificação de ganhadores
+     
+
+Infra:   
+     Colocar no AWS elastic beanstalk
+     Comprar dominio cblolbets.com.br
+
+Banco:
+     Criar campo, ganhou_qnt na tabela Bet @done
+    
+     
+     
+     

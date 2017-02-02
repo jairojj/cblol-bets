@@ -31,7 +31,7 @@
           <span class="label label-default">Jogo nao terminou</span>
         <% else %>
           <% if get_jogo(bet.jogo_id).resultado == bet.resultado %>
-            <span class="label label-success">Voce ganhou X</span>
+            <span class="label label-success">Voce ganhou <%= bet.ganhou_qnt %> </span>
           <% else %>
             <span class="label label-danger"> Voce perdeu </span>
           <% end %>
