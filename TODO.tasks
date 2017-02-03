@@ -12,8 +12,8 @@ Banco:
   ✔ Criar campo, ganhou_qnt na tabela Bet @done (02/02/2017 15:29:52)
 
 Apostas:
-  ☐ Formula para ganhadores receber o dinheiro certo @high 
-  ☐ Arrumar e testar script encontrar_vencedores para pegar last(4) @high 
+  ☐ Formula para ganhadores receber o dinheiro certo @high  @done
+  ☐ Arrumar e testar script encontrar_vencedores para pegar last(4) @high @done
   ✔ Script para encontrar vencedores da semana e distribuir as coins @done (02/02/2017 15:30:03)
 
 
@@ -21,6 +21,7 @@ Front end:
   ☐ Colocar footer colado no fim da pagina @low 
   ☐ Colocar bootstrap nos form de sign up, sign in e edit user @low 
   ☐ Melhorias no site mobile @low 
+     Colocar imagem para logar com facebook @low
     
      
      
