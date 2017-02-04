@@ -27,7 +27,7 @@
         <br>
         <p> <%= bet.valor%> <%= image_tag("coin.png", height: '25', width: '25')%> </p>
         <br>
-        <% if get_jogo(bet.jogo_id).status == false %>
+        <% if get_jogo(bet.jogo_id).status == false || get_jogo(bet.jogo_id).resultado == nil%>
           <span class="label label-default">Jogo nao terminou</span>
         <% else %>
           <% if get_jogo(bet.jogo_id).resultado == bet.resultado %>
