@@ -4,6 +4,9 @@ Site:
   ☐ Sistema de notificação de ganhadores @low 
   ✔ Retirar coins apostados da tela de jogos @done (02/02/2017 16:00:55)
   ✔ Fazer sistema admin @done (03/02/2017 17:01:47)
+  ✔ Email de esqueci a senha @done (05/02/2017 21:30:12)
+  ☐ Upload de fotos para perfil de usuario @low
+  ☐ Na tela de minhas apostas mostrar as apostas dos proximos jogos primeiro @high 
 
 Infra:   
   ☐ Colocar no AWS elastic beanstalk @low 
