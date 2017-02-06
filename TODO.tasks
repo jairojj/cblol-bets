@@ -7,7 +7,7 @@ Site:
   ✔ Email de esqueci a senha @done (05/02/2017 21:30:12)
   ☐ Upload de fotos para perfil de usuario @low
   ✔ Na tela de minhas apostas mostrar as apostas dos proximos jogos primeiro @high @done (06/02/2017 15:21:04)
-  ☐ Ranking por semana @today @high
+  ✔ Ranking por semana @high @done (06/02/2017 16:21:49)
   ☐ Login com facebook, como alterar nome se nao sei a senha @high
   ✔ Apostas duplicadas @high @done (06/02/2017 15:21:09)
   ✘ Subdominio admin.cblolbets.com @low @cancelled (06/02/2017 15:21:28)
@@ -29,4 +29,5 @@ Front end:
   ☐ Colocar footer colado no fim da pagina @low 
   ☐ Colocar bootstrap nos form de sign up, sign in e edit user @low 
   ☐ Melhorias no site mobile @low 
-  ☐ Colocar imagem para logar com facebook @low     
+  ✔ Colocar imagem para logar com facebook @low @done (06/02/2017 17:11:59)
+  ✔ Area de contato @critical @done (06/02/2017 17:13:39)
