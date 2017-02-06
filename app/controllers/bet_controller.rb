@@ -1,4 +1,6 @@
 class BetController < ApplicationController
+  before_action :apostas_duplicadas, only: [:new]
+  
   def new
     @bet = Bet.new
     @jogo = Jogo.find(params[:id])
@@ -57,7 +59,15 @@ class BetController < ApplicationController
 
   def index
     @bet = Bet.where(user_id: current_user.id).order(id: :desc)
-  end  
+  end 
+  
+  def apostas_duplicadas
+    @duplicada = Bet.where(jogo_id: params[:id], user_id: current_user.id).take
+    if !@duplicada.nil?
+      redirect_to '/jogos'
+    end
+  end
+  
 end
 
   

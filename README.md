@@ -1,4 +1,4 @@
 # Cblol Bets
 
-Codigo fonte do site https://cblolbets.herokuapp.com 
+Codigo fonte do site http://www.cblolbets.com 
 
