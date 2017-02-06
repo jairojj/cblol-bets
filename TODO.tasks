@@ -10,7 +10,7 @@ Site:
      Ranking por semana @today @high
      Login com facebook, como alterar nome se nao sei a senha @high
      Apostas duplicadas @high @done
-     Subdominio admin.cblolbets.com @today @low
+     Subdominio admin.cblolbets.com @cancel @low
 
 Infra:   
   ☐ Colocar no AWS elastic beanstalk @low 

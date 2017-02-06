@@ -34,7 +34,12 @@ $(function(){
     else {
       $('#bet_resultado_time1').val('null');
     }
-  });  
+  }); 
+  
+  $('#ranking').on('change', function (e){
+    var valueSelected = this.value;
+    window.location = "/ranking?semana=" + valueSelected;
+  });
 
 })
 
