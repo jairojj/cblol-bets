@@ -56,7 +56,7 @@ class BetController < ApplicationController
   end
 
   def index
-    @bet = Bet.where(user_id: current_user.id)
+    @bet = Bet.where(user_id: current_user.id).order(id: :desc)
   end  
 end
 
