@@ -8,7 +8,9 @@ Site:
   ☐ Upload de fotos para perfil de usuario @low
   ☐ Na tela de minhas apostas mostrar as apostas dos proximos jogos primeiro @high @done
      Ranking por semana @today @high
-     Login com facebook, como alterar nome se nao sei a senha
+     Login com facebook, como alterar nome se nao sei a senha @high
+     Apostas duplicadas @high @done
+     Subdominio admin.cblolbets.com @today @low
 
 Infra:   
   ☐ Colocar no AWS elastic beanstalk @low 

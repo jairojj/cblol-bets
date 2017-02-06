@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  constraints :subdomain => 'admin' do
+    mount RailsAdmin::Engine => '/', as: 'rails_admin'
+  end
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   get "/jogos", to: 'jogos#index'
   get "/aposta/new", to: 'bet#new'
