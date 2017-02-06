@@ -20,7 +20,7 @@ $(function(){
     }
   });
   
-    $('#bet_resultado_time2').on('change', function (e) {
+  $('#bet_resultado_time2').on('change', function (e) {
     var valueSelected = this.value;
     if(valueSelected == 'vitoria'){
       $('#bet_resultado_time1').val('derrota');
@@ -35,6 +35,26 @@ $(function(){
       $('#bet_resultado_time1').val('null');
     }
   }); 
+
+  function getParameterByName(name, url) {
+    if (!url) {
+      url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+
+    var parameter = getParameterByName('semana');
+    if (parameter != null) {
+      $('#ranking').val(parameter);
+    }
+    else{
+      $('#ranking').val('all');
+    }
   
   $('#ranking').on('change', function (e){
     var valueSelected = this.value;

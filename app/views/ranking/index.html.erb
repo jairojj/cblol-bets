@@ -18,19 +18,37 @@
       </tr>
     </thead>
     <tbody>
-      <% @user.each_with_index do |user, index| %>
-      <tr>
-        <td> <%= index + 1 %> </td>
-        <td> 
-          <% if user.picture.present? %>
-            <%= image_tag(user.picture, size: "40", class: "img-circle") %>
-          <% else %>
-            <%= image_tag gravatar_url(user.email, 40), alt: "", class: "img-circle" %>
-          <% end %>
-          <%= user.name %> 
-        </td>
-        <td> <%= user.coin %> </td>
-      </tr>
+      <% if params[:semana].nil? || params[:semana] == 'all' %>
+        <% @user.each_with_index do |user, index| %>
+        <tr>
+          <td> <%= index + 1 %> </td>
+          <td> 
+            <% if user.picture.present? %>
+              <%= image_tag(user.picture, size: "40", class: "img-circle") %>
+            <% else %>
+              <%= image_tag gravatar_url(user.email, 40), alt: "", class: "img-circle" %>
+            <% end %>
+            <%= user.name %> 
+          </td>
+          <td> <%= user.coin %> </td>
+        </tr>
+        <% end %>
+      <% else %>
+        <% @coin_semana.sort_by {|k,v| v}.reverse.each_with_index do |(key, value), index| %>
+          <tr>
+            <td> <%= index + 1 %> </td>
+            <td> 
+              <% if get_user(key).picture.present? %>
+                <%= image_tag(get_user(key).picture, size: "40", class: "img-circle") %>
+              <% else %>
+                <%= image_tag gravatar_url(get_user(key).email, 40), alt: "", class: "img-circle" %>
+              <% end %>
+
+              <%= get_user(key).name %> 
+            </td>
+            <td> <%= value %> </td>
+          </tr>
+        <% end %>
       <% end %>
     </tbody>
   </table>

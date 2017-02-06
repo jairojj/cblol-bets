@@ -6,11 +6,11 @@ Site:
   ✔ Fazer sistema admin @done (03/02/2017 17:01:47)
   ✔ Email de esqueci a senha @done (05/02/2017 21:30:12)
   ☐ Upload de fotos para perfil de usuario @low
-  ☐ Na tela de minhas apostas mostrar as apostas dos proximos jogos primeiro @high @done
-     Ranking por semana @today @high
-     Login com facebook, como alterar nome se nao sei a senha @high
-     Apostas duplicadas @high @done
-     Subdominio admin.cblolbets.com @cancel @low
+  ✔ Na tela de minhas apostas mostrar as apostas dos proximos jogos primeiro @high @done (06/02/2017 15:21:04)
+  ☐ Ranking por semana @today @high
+  ☐ Login com facebook, como alterar nome se nao sei a senha @high
+  ✔ Apostas duplicadas @high @done (06/02/2017 15:21:09)
+  ✘ Subdominio admin.cblolbets.com @low @cancelled (06/02/2017 15:21:28)
 
 Infra:   
   ☐ Colocar no AWS elastic beanstalk @low 
