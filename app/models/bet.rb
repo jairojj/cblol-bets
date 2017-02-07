@@ -17,6 +17,8 @@ class Bet < ApplicationRecord
       perdedores = 0
       coin_apostado = 0
       coin_final = 0
+      porcentagem = 0
+      vencedores_total_coin = 0
 
       @apostas = Bet.where(jogo_id: jogo.id)
       
@@ -25,6 +27,7 @@ class Bet < ApplicationRecord
         if aposta.resultado == jogo.resultado
           vencedores << aposta.user_id
           apostas_vencedoras << aposta.id
+          vencedores_total_coin = vencedores_total_coin + aposta.valor
         else
           perdedores = perdedores + aposta.valor
         end
@@ -32,16 +35,20 @@ class Bet < ApplicationRecord
       end
       
         puts "vencedores " + vencedores.length.to_s
+        puts "perdedores " + perdedores.to_s
+        puts "vencedores_total_coin " + vencedores_total_coin.to_s
         
         vencedores.each do |vencedor|
           coin_atual = User.find(vencedor).coin
           coin_apostado = Bet.where(user_id: vencedor, jogo_id: jogo.id).take
+          porcentagem = coin_apostado.valor.to_f / vencedores_total_coin
+          puts "porcentagem " + porcentagem.to_s
           puts "coin_atual " + coin_atual.to_s
-          coin_final = coin_atual + coin_apostado.valor + ( perdedores / vencedores.length )
+          coin_final = coin_atual + coin_apostado.valor + ( perdedores * porcentagem )
           puts "coin final: " + coin_final.to_s
           User.update(vencedor, :coin => coin_final)
           aposta_vencedora = Bet.where(jogo_id: jogo.id, user_id: vencedor).take
-          Bet.update(aposta_vencedora.id, :ganhou_qnt =>  coin_apostado.valor + ( perdedores / vencedores.length ) )
+          Bet.update(aposta_vencedora.id, :ganhou_qnt =>  coin_apostado.valor + ( perdedores * porcentagem ) )
         end
     
     end
