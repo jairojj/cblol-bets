@@ -14,7 +14,7 @@ Site:
 
 Infra:   
   ☐ Colocar no AWS elastic beanstalk @low 
-  ☐ Comprar dominio cblolbets.com @high @done
+  ✔ Comprar dominio cblolbets.com @high @done (08/02/2017 15:28:28)
 
 Banco:
   ✔ Criar campo, ganhou_qnt na tabela Bet @done (02/02/2017 15:29:52)
