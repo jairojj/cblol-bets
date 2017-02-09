@@ -11,6 +11,8 @@ Site:
   ☐ Login com facebook, como alterar nome se nao sei a senha @high
   ✔ Apostas duplicadas @high @done (06/02/2017 15:21:09)
   ✘ Subdominio admin.cblolbets.com @low @cancelled (06/02/2017 15:21:28)
+    Conectar conta existente ao facebook @high @done
+    Notificaçao para usuarios que nao tem conta conectada ao facebook @today @high
 
 Infra:   
   ☐ Colocar no AWS elastic beanstalk @low 
