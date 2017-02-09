@@ -12,4 +12,12 @@ class User < ApplicationRecord
       user.picture = auth.info.image
     end
   end
+  
+  def link_account_from_omniauth(auth)
+    self.provider = auth.provider
+    self.uid = auth.uid
+    self.picture = auth.info.image
+    self.save
+  end
+  
 end
